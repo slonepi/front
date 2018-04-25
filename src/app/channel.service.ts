@@ -3,7 +3,7 @@ import {MessageService} from "./message.service";
 import {Observable} from "rxjs/Observable";
 import {Channel} from "./channel";
 import {of} from "rxjs/observable/of";
-import {CHANNELS} from "./mock-channels";
+import {CHANNELS} from "./mock/mock-channels";
 
 @Injectable()
 export class ChannelService {
@@ -15,9 +15,9 @@ export class ChannelService {
     return of(CHANNELS);
   }
 
-  getHero(id: String): Observable<Channel> {
+  getChannel(id: String): Observable<Channel> {
     // TODO: send the message _after_ fetching the hero
-    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    this.messageService.add(`ChannelService: fetched channelInfo id=${id}`);
     return of(CHANNELS.find(channel => channel.id === id));
   }
 

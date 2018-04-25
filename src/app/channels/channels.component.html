@@ -1,3 +1,7 @@
-<p>
-  channels works!
-</p>
+<ul class="heroes">
+  <li *ngFor="let channel of channels">
+    <a routerLink="/channel/{{channel.id}}">
+      <span class="badge">{{channel.title}}</span>
+    </a>
+  </li>
+</ul>
