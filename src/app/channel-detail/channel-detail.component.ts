@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Channel} from "../channel";
+import {ChannelInfo} from "../models/channelInfo";
 import {ChannelService} from "../channel.service";
 import {ActivatedRoute} from "@angular/router";
 import { Location } from '@angular/common';
@@ -11,7 +11,7 @@ import { Location } from '@angular/common';
 })
 export class ChannelDetailComponent implements OnInit {
 
-  @Input() channel : Channel;
+  @Input() channelInfo : ChannelInfo;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,6 +25,6 @@ export class ChannelDetailComponent implements OnInit {
   getHero(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.channnelService.getChannel(id)
-      .subscribe(channelInfo => this.channel = channelInfo);
+      .subscribe(channelInfo => this.channelInfo = channelInfo);
   }
 }

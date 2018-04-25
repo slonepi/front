@@ -1,4 +1,4 @@
-export class Channel {
+export class ChannelInfo {
   id: string;
   title: string;
   description: string;

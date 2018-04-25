@@ -1,5 +1,5 @@
-import {Channel} from "../channel";
-import {ChannelData} from "../channelData";
+import {ChannelInfo} from "../models/channelInfo";
+import {ChannelData} from "../models/channelData";
 
 export const CHANNELData: ChannelData[] = [
   {

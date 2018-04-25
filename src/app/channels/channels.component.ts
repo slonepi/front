@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ChannelService} from "../channel.service";
-import {Channel} from "../channel";
+import {ChannelInfo} from "../models/channelInfo";
 
 @Component({
   selector: 'app-channels',
@@ -9,7 +9,7 @@ import {Channel} from "../channel";
 })
 export class ChannelsComponent implements OnInit {
 
-  channels : Channel[];
+  channels : ChannelInfo[];
   constructor(private channelService : ChannelService) { }
 
   ngOnInit() {

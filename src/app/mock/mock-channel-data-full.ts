@@ -1,5 +1,5 @@
-import {Channel} from "../channel";
-import {ChannelData} from "../channelData";
+import {ChannelInfo} from "../models/channelInfo";
+import {ChannelData} from "../models/channelData";
 
 export const CHANNELDataFull: ChannelData[] = [
   {"id":4,"channelId":"UCiWrr_SnP8eK-_9yJWFzbEA","savedOn":"2018-03-29T18:00:01.581651","viewCount":31,"subscriberCount":3183,"videoCount":31},

@@ -11,7 +11,7 @@ import {FormsModule} from "@angular/forms";
 import {ChannelService} from "./channel.service";
 import {MessagesComponent} from "./messages/messages.component";
 import {ChartsModule} from "ng2-charts";
-import { LineChartDemoComponent } from './line-chart-demo/line-chart-demo.component';
+import { ChannelStatsComponent } from './channel-stats/channel-stats.component';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { LineChartDemoComponent } from './line-chart-demo/line-chart-demo.compon
     ChannelDetailComponent,
     MessagesComponent,
     ChannelsComponent,
-    LineChartDemoComponent
+    ChannelStatsComponent
   ],
   imports: [
     BrowserModule,

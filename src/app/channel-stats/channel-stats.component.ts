@@ -1,14 +1,14 @@
 import {Component} from '@angular/core';
 import {CHANNELData} from "../mock/mock-channel-data";
-import {ChannelData} from "../channelData";
+import {ChannelData} from "../models/channelData";
 import {DatePipe} from '@angular/common';
 import {CHANNELDataFull} from "../mock/mock-channel-data-full";
 
 @Component({
-  selector: 'line-chart-demo',
-  templateUrl: './line-chart-demo.component.html'
+  selector: 'channel-stats',
+  templateUrl: './channel-stats.component.html'
 })
-export class LineChartDemoComponent {
+export class ChannelStatsComponent {
 
   channelData: ChannelData[] = CHANNELData;
   xaxis: Date[] = this.channelData.map((d) => new Date(d.savedOn));

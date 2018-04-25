@@ -1,4 +1,9 @@
-<h2>Channel: {{ channel.title }}</h2>
-<div><span>id:</span>{{ channel.id}}</div>
-<div><span>description:</span>{{ channel.description}}</div>
-<img src="{{ channel.url }}" alt="Logo">
+<nav>
+  <a routerLink="/channels">channels</a>
+  <a routerLink="/chart">chart</a>
+</nav>
+
+<h2>Channel: {{ channelInfo.title }}</h2>
+<div><span>id:</span>{{ channelInfo.id}}</div>
+<div><span>description:</span>{{ channelInfo.description}}</div>
+<img src="{{ channelInfo.url }}" alt="Logo">
