@@ -7,7 +7,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-channel-detail',
   templateUrl: './channel-detail.component.html',
-  styleUrls: ['./channel-detail.component.css']
+  styleUrls: ['./channel-detail.component.scss']
 })
 export class ChannelDetailComponent implements OnInit {
 
