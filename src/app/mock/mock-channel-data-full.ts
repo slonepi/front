@@ -1,4 +1,3 @@
-import {ChannelInfo} from "../models/channelInfo";
 import {ChannelData} from "../models/channelData";
 
 export const CHANNELDataFull: ChannelData[] = [

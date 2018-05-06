@@ -13,7 +13,7 @@ import {MessagesComponent} from "./messages/messages.component";
 import {ChartsModule} from "ng2-charts";
 import { ChannelStatsComponent } from './channel-stats/channel-stats.component';
 import { CoreModule } from './core/core.module';
-
+import { VideoStatsComponent } from './video-stats/video-stats.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { CoreModule } from './core/core.module';
     ChannelDetailComponent,
     MessagesComponent,
     ChannelsComponent,
-    ChannelStatsComponent
+    ChannelStatsComponent,
+    VideoStatsComponent
   ],
   imports: [
     BrowserModule,
