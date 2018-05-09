@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ChannelService} from "../../channel.service";
+import {ChannelService} from "../../core/services/channel.service";
 import {ChannelInfo} from "../../models/channelInfo";
 import {LoggerService} from "../../core/services/logger/logger.service";
 

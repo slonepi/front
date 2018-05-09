@@ -1,10 +1,12 @@
 import {Injectable} from '@angular/core';
 import {MessageService} from "./message.service";
 import {Observable} from "rxjs/Observable";
-import {ChannelInfo} from "./models/channelInfo";
+import {ChannelInfo} from "./../../models/channelInfo";
+import {ChannelData} from "./../../models/channelData";
 import {of} from "rxjs/observable/of";
-import {CHANNELSINFO} from "./mock/mock-channels";
-import {LoggerService} from "./core/services/logger/logger.service";
+import {CHANNELSINFO} from "./../../mock/mock-channels";
+import {LoggerService} from "./logger/logger.service";
+import {CHANNELData} from "../../mock/mock-channel-data";
 
 @Injectable()
 export class ChannelService {
@@ -24,4 +26,10 @@ export class ChannelService {
     return of(CHANNELSINFO.find(channel => channel.id === id));
   }
 
+  getChannelData(channelId: String): Observable<ChannelData> {
+    // TODO: send the message _after_ fetching the hero
+    this.LOGGER.info("ChannelService : fetched channelData id=${id}");
+    this.messageService.add(`ChannelService: fetched channelData id=${channelId}`);
+    return of(CHANNELData.find(channel => channel.channelId === channelId));
+  }
 }

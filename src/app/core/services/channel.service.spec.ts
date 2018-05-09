@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { ChannelService } from './channel.service';
+import { ChannelService } from './channel.service.ts';
 
 describe('ChannelService', () => {
   beforeEach(() => {
