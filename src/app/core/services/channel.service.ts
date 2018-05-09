@@ -30,6 +30,6 @@ export class ChannelService {
     // TODO: send the message _after_ fetching the hero
     this.LOGGER.info("ChannelService : fetched channelData id=${id}");
     this.messageService.add(`ChannelService: fetched channelData id=${channelId}`);
-    return of(CHANNELData.find(channel => channel.channelId === channelId));
+    return of(CHANNELData.slice(1,2)[0]);
   }
 }

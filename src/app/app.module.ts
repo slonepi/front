@@ -16,6 +16,7 @@ import { CoreModule } from './core/core.module';
 import { VideoStatsComponent } from './video-stats/video-stats.component';
 import { ChannelInfoComponent } from './components/channelinfo/channel-info.component';
 import { ChannelDashboardComponent } from './components/channel-dashboard/channel-dashboard.component';
+import {ChannelDataComponent} from "./components/channel-data/channel-data.component";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ChannelDashboardComponent } from './components/channel-dashboard/channe
     VideoStatsComponent,
     ChannelInfoComponent,
     ChannelDashboardComponent,
+    ChannelDataComponent,
   ],
   imports: [
     BrowserModule,
