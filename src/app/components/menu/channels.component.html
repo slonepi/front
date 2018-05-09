@@ -1,6 +1,7 @@
+<router-outlet></router-outlet>
 <ul class="channelInfo">
   <li *ngFor="let channel of channels">
-    <a routerLink="/channelInfo/{{channel.id}}">
+    <a routerLink="/channel-dashboard/{{channel.id}}">
       <span class="badge">{{channel.title}}</span>
     </a>
   </li>

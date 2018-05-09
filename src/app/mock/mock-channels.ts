@@ -1,6 +1,6 @@
 import {ChannelInfo} from "../models/channelInfo";
 
-export const CHANNELS: ChannelInfo[] = [
+export const CHANNELSINFO: ChannelInfo[] = [
   {
     id: "UC_yP2DpIgs5Y1uWC0T03Chw",
     title: "Joueur Du Grenier",

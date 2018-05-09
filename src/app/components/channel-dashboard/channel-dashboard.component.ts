@@ -1,15 +1,15 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ChannelInfo} from "../models/channelInfo";
-import {ChannelService} from "../channel.service";
+import {ChannelInfo} from "../../models/channelInfo";
+import {ChannelService} from "../../channel.service";
 import {ActivatedRoute} from "@angular/router";
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-channel-detail',
-  templateUrl: './channel-detail.component.html',
-  styleUrls: ['./channel-detail.component.scss']
+  selector: 'app-channel-dashboard',
+  templateUrl: './channel-dashboard.component.html',
+  styleUrls: ['./channel-dashboard.component.css']
 })
-export class ChannelDetailComponent implements OnInit {
+export class ChannelDashboardComponent implements OnInit {
 
   @Input() channelInfo : ChannelInfo;
 
@@ -19,12 +19,14 @@ export class ChannelDetailComponent implements OnInit {
     private location: Location) { }
 
   ngOnInit() {
-    this.getChannelDetail();
+    this.getChannelInfo();
   }
 
-  getChannelDetail(): void {
+  getChannelInfo(): void {
     const id = this.route.snapshot.paramMap.get('id');
+    console.log("channelInfo " + id)
     this.channnelService.getChannelInfo(id)
       .subscribe(channelInfo => this.channelInfo = channelInfo);
   }
+
 }
