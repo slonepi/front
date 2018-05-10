@@ -20,7 +20,10 @@ import { VideoDataComponent } from './components/video-data/video-data.component
 import { VideoInfoComponent } from './components/video-info/video-info.component';
 import { VideoDashboardComponent } from './components/video-dashboard/video-dashboard.component';
 import {VideoStatsComponent} from "./components/video-stats/video-stats.component";
+<<<<<<< Updated upstream
 import {VideoService} from "./core/services/video.service";
+=======
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
