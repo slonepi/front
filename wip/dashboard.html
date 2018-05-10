@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="channels.scss">
+    <link rel="stylesheet" href="channelInfo.scss">
+
+</head>
+<body>
+
+    <router-outlet _ngcontent-c0=""></router-outlet>
+    <app-channel-dashboard class="channel-dashboard">
+
+        <!-- ************** menu channels ---------->
+<nav  class="nav flex-column navbar-expand-sm bg-dark navbar-dark">
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <app-channels _ngcontent-c2="" _nghost-c3=""><router-outlet _ngcontent-c3=""></router-outlet>
+        <ul _ngcontent-c3="" class="channelInfo">
+          <!--bindings={
+          "ng-reflect-ng-for-of": "[object Object],[object Object"
+        }--><li _ngcontent-c3="">
+            <a _ngcontent-c3="" ng-reflect-router-link="/channel-dashboard/UC_yP2DpIgs" href="/channel-dashboard/UC_yP2DpIgs5Y1uWC0T03Chw">
+              <span _ngcontent-c3="" class="badge">Joueur Du Grenier</span>
+            </a>
+          </li><li _ngcontent-c3="">
+            <a _ngcontent-c3="" ng-reflect-router-link="/channel-dashboard/UCB0qpLkjzV" href="/channel-dashboard/UCB0qpLkjzVlVZ4c8nKiCEyw">
+              <span _ngcontent-c3="" class="badge">pvnova</span>
+            </a>
+          </li><li _ngcontent-c3="">
+            <a _ngcontent-c3="" ng-reflect-router-link="/channel-dashboard/UCdnaDhU-LD" href="/channel-dashboard/UCdnaDhU-LDQrIEEmSIfq0-Q">
+              <span _ngcontent-c3="" class="badge">Mediapart</span>
+            </a>
+          </li>
+        </ul>
+        </app-channels>
+</div>
+</nav>
+<!-- ********* channel-dashboard-header *********** -->
+<div class="channel-dashboard-header">
+
+    <!-- ********* channel-Info *********** -->
+    <div class="channelInfo">
+        <app-channel-info _ngcontent-c2="" _nghost-c4="" ng-reflect-channel-info="[object Object]"><img _ngcontent-c4="" alt="Logo" src="https://yt3.ggpht.com/-2eu-eG4PLa8/AAAAAAAAAAI/AAAAAAAAAAA/FZUzswUhAmI/s88-c-k-no-mo-rj-c0xffffff/photo.jpg">
+        <div _ngcontent-c4="">
+          <h1 _ngcontent-c4="">Joueur Du Grenier</h1>
+          <br _ngcontent-c4="">
+          <div _ngcontent-c4=""><span _ngcontent-c4="">Description:</span>Test de jeux à la con !</div>
+        </div>
+    </div>
+    <p _ngcontent-c4="" hidden="true">UC_yP2DpIgs5Y1uWC0T03Chw</p>
+    </app-channel-info>
+    <!-- ********* channel-data *********** -->
+    <app-channel-data _ngcontent-c2="" _nghost-c5="" ng-reflect-channel-data="[object Object]"><div _ngcontent-c5="">
+    3553 followers
+    32 videos
+    </div>
+    </app-channel-data>
+</div>
+
+</app-channel-dashboard>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
