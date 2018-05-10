@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {VideoData} from "../models/videoData";
-import {VIDEODataFull} from "../mock/mock-video-data-full";
+import {VIDEODataFull} from "../../mock/mock-video-data-full";
+import {VideoData} from "../../models/videoData";
 
 @Component({
   selector: 'video-stats',

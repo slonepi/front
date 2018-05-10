@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ChannelService} from "../channel.service";
-import {ChannelInfo} from "../models/channelInfo";
-import {LoggerService} from "../core/services/logger/logger.service";
+import {ChannelService} from "../../core/services/channel.service";
+import {ChannelInfo} from "../../models/channelInfo";
+import {LoggerService} from "../../core/services/logger/logger.service";
 
 @Component({
   selector: 'app-channels',
@@ -18,7 +18,7 @@ export class ChannelsComponent implements OnInit {
   }
 
   getChannels(): void {
-    this.channelService.getChannels().subscribe(channels => this.channels = channels)
+    this.channelService.getAllChannelsInfo().subscribe(channels => this.channels = channels)
   }
 
 }

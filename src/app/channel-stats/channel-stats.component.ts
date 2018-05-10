@@ -5,7 +5,7 @@ import {DatePipe} from '@angular/common';
 import {CHANNELDataFull} from "../mock/mock-channel-data-full";
 
 @Component({
-  selector: 'channel-stats',
+  selector: 'app-channel-stats',
   templateUrl: './channel-stats.component.html'
 })
 export class ChannelStatsComponent {
