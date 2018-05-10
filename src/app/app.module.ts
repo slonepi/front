@@ -13,10 +13,14 @@ import {MessagesComponent} from "./messages/messages.component";
 import {ChartsModule} from "ng2-charts";
 import { ChannelStatsComponent } from './channel-stats/channel-stats.component';
 import { CoreModule } from './core/core.module';
-import { VideoStatsComponent } from './video-stats/video-stats.component';
 import { ChannelInfoComponent } from './components/channelinfo/channel-info.component';
 import { ChannelDashboardComponent } from './components/channel-dashboard/channel-dashboard.component';
 import {ChannelDataComponent} from "./components/channel-data/channel-data.component";
+import { VideoDataComponent } from './components/video-data/video-data.component';
+import { VideoInfoComponent } from './components/video-info/video-info.component';
+import { VideoDashboardComponent } from './components/video-dashboard/video-dashboard.component';
+import {VideoStatsComponent} from "./components/video-stats/video-stats.component";
+import {VideoService} from "./core/services/video.service";
 
 @NgModule({
   declarations: [
@@ -29,6 +33,9 @@ import {ChannelDataComponent} from "./components/channel-data/channel-data.compo
     ChannelInfoComponent,
     ChannelDashboardComponent,
     ChannelDataComponent,
+    VideoDataComponent,
+    VideoInfoComponent,
+    VideoDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,7 @@ import {ChannelDataComponent} from "./components/channel-data/channel-data.compo
     ChartsModule,
     CoreModule
   ],
-  providers: [MessageService, ChannelService],
+  providers: [MessageService, ChannelService, VideoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

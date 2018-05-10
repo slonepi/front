@@ -14,21 +14,19 @@ export class ChannelService {
   constructor(private messageService: MessageService, private LOGGER: LoggerService) {
   }
 
-  getChannels(): Observable<ChannelInfo[]> {
-    this.messageService.add('ChannelInfo: fetched heroes');
+  getAllChannelsInfo(): Observable<ChannelInfo[]> {
+    this.messageService.add('ChannelInfo: fetched all channelInfo');
     return of(CHANNELSINFO);
   }
 
   getChannelInfo(id: String): Observable<ChannelInfo> {
-    // TODO: send the message _after_ fetching the hero
     this.LOGGER.info("ChannelService : fetched channelInfo id=${id}");
     this.messageService.add(`ChannelService: fetched channelInfo id=${id}`);
     return of(CHANNELSINFO.find(channel => channel.id === id));
   }
 
   getChannelData(channelId: String): Observable<ChannelData> {
-    // TODO: send the message _after_ fetching the hero
-    this.LOGGER.info("ChannelService : fetched channelData id=${id}");
+    this.LOGGER.info("ChannelService : fetched channelData id=${channelId}");
     this.messageService.add(`ChannelService: fetched channelData id=${channelId}`);
     return of(CHANNELData.slice(1,2)[0]);
   }

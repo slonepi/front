@@ -18,7 +18,7 @@ export class ChannelsComponent implements OnInit {
   }
 
   getChannels(): void {
-    this.channelService.getChannels().subscribe(channels => this.channels = channels)
+    this.channelService.getAllChannelsInfo().subscribe(channels => this.channels = channels)
   }
 
 }
