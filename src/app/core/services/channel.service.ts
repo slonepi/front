@@ -7,11 +7,14 @@ import {of} from "rxjs/observable/of";
 import {CHANNELSINFO} from "./../../mock/mock-channels";
 import {LoggerService} from "./logger/logger.service";
 import {CHANNELData} from "../../mock/mock-channel-data";
+import { HttpClient, HttpResponse } from '@angular/common/http';
 
 @Injectable()
 export class ChannelService {
 
-  constructor(private messageService: MessageService, private LOGGER: LoggerService) {
+  URL : String = "http://localhost:8090/";
+
+  constructor(private messageService: MessageService, private LOGGER: LoggerService, private _http: HttpClient) {
   }
 
   getAllChannelsInfo(): Observable<ChannelInfo[]> {
@@ -22,12 +25,12 @@ export class ChannelService {
   getChannelInfo(id: String): Observable<ChannelInfo> {
     this.LOGGER.info("ChannelService : fetched channelInfo id=${id}");
     this.messageService.add(`ChannelService: fetched channelInfo id=${id}`);
-    return of(CHANNELSINFO.find(channel => channel.id === id));
+    return this._http.get<ChannelInfo>(`${this.URL}/channelInfo/?id=${id}`);
   }
 
   getChannelData(channelId: String): Observable<ChannelData> {
     this.LOGGER.info("ChannelService : fetched channelData id=${channelId}");
     this.messageService.add(`ChannelService: fetched channelData id=${channelId}`);
-    return of(CHANNELData.slice(1,2)[0]);
+    return this._http.get<ChannelData>(`${this.URL}/channelData/?id=${channelId}`)
   }
 }
