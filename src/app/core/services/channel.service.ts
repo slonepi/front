@@ -8,6 +8,7 @@ import {CHANNELSINFO} from "./../../mock/mock-channels";
 import {LoggerService} from "./logger/logger.service";
 import {CHANNELData} from "../../mock/mock-channel-data";
 import { HttpClient, HttpResponse } from '@angular/common/http';
+import {VideoInfo} from "../../models/videoInfo";
 
 @Injectable()
 export class ChannelService {
@@ -32,5 +33,11 @@ export class ChannelService {
     this.LOGGER.info("ChannelService : fetched channelData id=${channelId}");
     this.messageService.add(`ChannelService: fetched channelData id=${channelId}`);
     return this._http.get<ChannelData>(`${this.URL}/channelData/?id=${channelId}`)
+  }
+
+  getRelatedVideos(channelId: String): Observable<VideoInfo[]> {
+    this.LOGGER.info("ChannelService : fetched channelData id=${channelId}");
+    this.messageService.add(`ChannelService: fetched channelData id=${channelId}`);
+    return this._http.get<VideoInfo[]>(`${this.URL}/channelInfo/videos?id=${channelId}`)
   }
 }

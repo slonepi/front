@@ -13,7 +13,7 @@ import {MessagesComponent} from "./messages/messages.component";
 import {ChartsModule} from "ng2-charts";
 import { ChannelStatsComponent } from './channel-stats/channel-stats.component';
 import { CoreModule } from './core/core.module';
-import { ChannelInfoComponent } from './components/channelinfo/channel-info.component';
+import { ChannelInfoComponent } from './components/channel-info/channel-info.component';
 import { ChannelDashboardComponent } from './components/channel-dashboard/channel-dashboard.component';
 import {ChannelDataComponent} from "./components/channel-data/channel-data.component";
 import { VideoDataComponent } from './components/video-data/video-data.component';

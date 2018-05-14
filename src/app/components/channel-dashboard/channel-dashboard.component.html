@@ -1,4 +1,14 @@
 <app-channels></app-channels>
 <app-channel-info [channelInfo]="channelInfo"></app-channel-info>
 <app-channel-data [channelData]="channelData"></app-channel-data>
+
+<div class="videos">
+
+<div *ngFor="let videoInfo of videosInfo">
+  <a href="video-dashboard/{{videoInfo.id}}">
+  <img src="{{ videoInfo.url }}" alt="video Logo">
+  {{videoInfo.title}}
+  </a>
+</div>
+</div>
 <!--<app-channel-stats></app-channel-stats>-->

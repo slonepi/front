@@ -4,16 +4,18 @@ import {ChannelData} from "../../models/channelData";
 import {ChannelService} from "../../core/services/channel.service";
 import {ActivatedRoute} from "@angular/router";
 import { Location } from '@angular/common';
+import {VideoInfo} from "../../models/videoInfo";
 
 @Component({
   selector: 'app-channel-dashboard',
   templateUrl: './channel-dashboard.component.html',
-  styleUrls: ['./channel-dashboard.component.css']
+  styleUrls: ['./channel-dashboard.component.scss']
 })
 export class ChannelDashboardComponent implements OnInit {
 
   @Input() channelInfo : ChannelInfo;
   @Input() channelData : ChannelData;
+  @Input() videosInfo : VideoInfo[];
 
   constructor(
     private route: ActivatedRoute,
@@ -23,6 +25,7 @@ export class ChannelDashboardComponent implements OnInit {
   ngOnInit() {
     this.getChannelInfo();
     this.getChannelData();
+    this.getVideosInfo();
   }
 
   getChannelInfo(): void {
@@ -35,5 +38,11 @@ export class ChannelDashboardComponent implements OnInit {
     const channelId = this.route.snapshot.paramMap.get('id');
     this.channnelService.getChannelData(channelId)
       .subscribe(channelData => this.channelData = channelData);
+  }
+
+  getVideosInfo(): void {
+    const channelId = this.route.snapshot.paramMap.get('id');
+    this.channnelService.getRelatedVideos(channelId)
+      .subscribe(videosInfo => this.videosInfo = videosInfo);
   }
 }
